@@ -1,0 +1,58 @@
+{
+  "name": "nodebb-plugin-session-sharing",
+  "version": "7.2.0",
+  "description": "Allows login sessions from your app to persist in NodeBB",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/julianlam/nodebb-plugin-session-sharing"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin"
+  ],
+  "author": {
+    "name": "Julian Lam",
+    "email": "julian@nodebb.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julianlam/nodebb-plugin-session-sharing/issues"
+  },
+  "readmeFilename": "README.md",
+  "nbbpm": {
+    "compatibility": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "async": "^3",
+    "eslint": "^7.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "lint-staged": "^10.0.9",
+    "lodash": "^4.17.14"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-angular": "^7.1.2",
+    "eslint": "8.x",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-nodebb": "0.1.1",
+    "eslint-plugin-import": "2.x",
+    "husky": "^2.4.0",
+    "lint-staged": "^10.0.9",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9"
+  }
+}
